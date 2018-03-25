@@ -1,6 +1,15 @@
+Please note that this repository also contains files that might not be subject
+to this license. Specifically the NXP USBD example code may only be used on NXP
+hardware. Watch out for license notes in the header of the files.
+
+The resulting binary firmware files are also not subject to this license since
+they consist of predominantly Valve's code with minor changes and additions.
+
+
+
 MIT License
 
-Copyright (c) 2018 nairol
+Copyright (c) 2018 nairolf@online.de
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +28,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+

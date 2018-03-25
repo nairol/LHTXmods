@@ -1,0 +1,69 @@
+
+0. This is an unofficial firmware mod for HTC Vive Base Stations.
+   Don't use it with anything else.
+   This firmware enables the USB port and allows using the integrated shell that is usually only reachable via UART.
+
+1. Unplug the power cable from the base station.
+
+2. Find a Micro-USB cable that fits into the port on the back of the base station and plug it in.
+   The other end goes into your PC.
+
+3. Press and hold the mode selection button while plugging the power plug back in.
+   The button is on the back of the box next to the connectors.
+
+4. Your PC should detect a new flash drive called "CRP DISABLD".
+   The base station should stay dark and silent.
+   If it doesn't, unplug the power and try step 3 again.
+
+5. Open the flash drive ("CRP DISABLD") with a file manager.
+   There should be just one file called "firmware.bin".
+
+6. Delete the file "firmware.bin".
+
+7. Copy the new firmware file onto the flash drive.
+   You don't need to change its name back to "firmware.bin".
+
+8. Unplug the power cable and plug it back in.
+
+9. Your operating system should detect the base station as virtual serial port.
+   Use your favorite terminal application to connect to it.
+   The connection settings don't matter but flow control should be disabled.
+   (E.g. 115200 baud, 8 data bits, 1 stop bit, no parity, no flow control)
+
+
+Make a backup of the factory calibration and configuration using the command:
+> eeprom r 0 4032
+Copy its output somewhere safe so that you can restore the base station in case something goes wrong.
+
+Usually though the backup is not needed since you can revert all settings back to factory defaults using the command:
+> factory load-cal
+
+Stay away from the other commands starting with "factory" or "eeprom" if you don't know what you are doing.
+
+Pressing the Tab key will show all available commands.
+
+A list of all configuration parameters can be shown with:
+> param list
+
+Other useful commands are:
+> param info <name>
+> param get <name>
+> param set <name> <value>
+
+A full list of all available commands can be found here:  
+https://github.com/nairol/LighthouseRedox/blob/master/docs/Base%20Station%20Shell.md
+
+
+
+Name: lighthouse_tx_htc_2_0-436-2016-09-20__USB-CDC-v4.bin
+Size: 82744 Bytes
+SHA256: EF5FDFA5E1151BB9F8878795B5638C4F0995FA1599BEFAE7504AA048E6184410
+
+
+
+The modified firmware has been tested successfully on real hardware.
+
+Have fun! :)
+
+nairolf@online.de
+https://github.com/nairol/LHTXmods
